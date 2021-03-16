@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import dynamic from 'next/dynamic';
-//import QuestionsComponent from '../components/QuestionsComponent.jsx';
 
 const QuestionsComponent = dynamic(() => import('../components/QuestionsComponent'), { ssr: false });
 

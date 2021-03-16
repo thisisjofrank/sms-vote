@@ -1,3 +1,57 @@
+.answers {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
 .answer {
-    list-style-type: upper-alpha;
+    position: relative;
+    width: 50%;
+    list-style: none;
+}
+
+.image {
+    display: block;
+    width: calc(100% - 20px);
+    margin: 10px;
+    border: 3px solid black; 
+}
+
+.text {
+    position: absolute;
+    font-weight: bold;
+}
+
+.answer:first-child .text {
+    bottom: 20px;
+    right: 20px;
+}
+.answer:nth-child(2) .text {
+    bottom: 20px;
+    left: 20px;
+}
+.answer:nth-child(3) .text {
+    top: 20px;
+    right: 20px;
+}
+.answer:last-child .text {
+    top: 20px;
+    left: 20px;
+}
+
+.votes {
+    display: none;
+}
+
+.letter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    font-weight: bold;
+    font-size: 35vw;
+    color: #ccc;
+    opacity: 0.4;
+    line-height: 0.8em;
 }

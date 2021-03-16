@@ -5,14 +5,20 @@ import styles from './QuestionsComponent.module.css';
 const question = {
     text: "What is the best biscuit?",
     options: [
-        { key: "A", text: "Digestive", votes: 0 },
-        { key: "B", text: "Hobnob", votes: 0 },
-        { key: "C", text: "Bourbon", votes: 0 },
-        { key: "D", text: "Custard creme", votes: 0 }
+        { key: "A", text: "Jammy Dodger", votes: 0, src: "images/jamiedodger.jpg" },
+        { key: "B", text: "Oreo", votes: 0, src: "images/oreo.jpg" },
+        { key: "C", text: "Bourbon", votes: 0, src: "images/bourbon.jpg" },
+        { key: "D", text: "Custard cream", votes: 0, src: "images/custardcream.jpg" }
     ]
 };
 
 const QuestionsComponent = () => {
+
+    // question should be got from props
+    // default state should be got from question passed in props
+
+    const defaultState = question.options.map(x => x.key);
+    console.log(defaultState);
 
     const [votes, setVotes] = useState({ A: 0, B: 0, C: 0, D: 0 });
 
@@ -27,13 +33,20 @@ const QuestionsComponent = () => {
         setVotes(updatedVotes);
     });
 
-    const displayItems = question.options.map(opt => <li key={ opt.key } className={styles.answer}>{opt.text}, Votes: { opt.votes }</li>);
+    const displayItems = question.options.map(opt => 
+        <li key={ opt.key } className={styles.answer}>
+            <span className={styles.text}>{opt.text}</span> 
+            <span className={styles.votes}>Votes: { opt.votes }</span> 
+            <img className={styles.image} src={ opt.src } alt={ opt.text } />
+            <span className={styles.letter}>{ opt.key }</span>
+        </li>
+    );
 
 
     return (
     <>
         <h1>{ question.text } - { votes.A } - { votes.B } - { votes.C } - { votes.D }</h1>
-        <ul>
+        <ul className={styles.answers}>
             {displayItems}
         </ul>
     </>
