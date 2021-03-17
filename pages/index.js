@@ -18,9 +18,11 @@ export default function Home({ questions }) {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main className={styles.main}>
-        <h1>Text +33 644 634 209<br/>To see your message on this page</h1>
+      <header className={styles.header}>
+        <img src="/images/smsvote.svg" alt="sms vote" className={styles.logo}/>
+        <h1 className={styles.title}>Text: +33 644 634 209 <br />to vote</h1>
+      </header>
         <QuestionsComponent questions={questions} />
       </main>
 

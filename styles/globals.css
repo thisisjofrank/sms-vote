@@ -14,3 +14,11 @@ a {
 * {
   box-sizing: border-box;
 }
+
+:root {
+  --a: #ea4335;
+  --b: #4285f4;
+  --c: #34a853;
+  --d: #fbbc05;
+  --black: #05080C;
+}

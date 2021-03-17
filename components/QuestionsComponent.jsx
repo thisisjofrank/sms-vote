@@ -45,7 +45,7 @@ const QuestionsComponent = () => {
 
     return (
     <>
-        <h1>{ question.text } - { votes.A } - { votes.B } - { votes.C } - { votes.D }</h1>
+        <h1 className={styles.question}>{ question.text } - { votes.A } - { votes.B } - { votes.C } - { votes.D }</h1>
         <ul className={styles.answers}>
             {displayItems}
         </ul>

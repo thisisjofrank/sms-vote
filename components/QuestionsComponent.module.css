@@ -1,3 +1,7 @@
+.question {
+    text-align: center;
+}
+
 .answers {
     display: flex;
     flex-wrap: wrap;
@@ -15,7 +19,7 @@
     display: block;
     width: calc(100% - 20px);
     margin: 10px;
-    border: 3px solid black; 
+    border: 3px solid; 
 }
 
 .text {
@@ -40,6 +44,19 @@
     left: 20px;
 }
 
+.answer:first-child {
+    color: var(--a);
+}
+.answer:nth-child(2) {
+    color:var(--b);
+}
+.answer:nth-child(3) {
+    color: var(--c);
+}
+.answer:last-child {
+    color: var(--d);
+}
+
 .votes {
     display: none;
 }
@@ -51,7 +68,7 @@
     transform: translate(-50%, -60%);
     font-weight: bold;
     font-size: 35vw;
-    color: #ccc;
+    color: #aaa;
     opacity: 0.4;
     line-height: 0.8em;
 }
