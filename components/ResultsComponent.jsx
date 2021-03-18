@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useChannel } from "./AblyReactEffect";
+import { useChannel, readLastAblyMessage, leadingClientSends } from "./AblyReactEffect";
 import styles from './ResultsComponent.module.css';
 import { parseSms } from "./parseSms";
 
@@ -10,13 +10,19 @@ const ResultsComponent = ({ question }) => {
 
     const [votes, setVotes] = useState(initialScores);
 
-    useChannel("sms-notifications", (message) => {
+    const [statusChannel] = readLastAblyMessage("sms-notifications-votes", async (lastMessage) => {
+        setVotes(lastMessage.data);
+    });
+
+    const [channel, ably] = useChannel("sms-notifications", async (message) => {
         const sms = parseSms(message);
         const value = sms.text.toUpperCase();
 
         const updatedVotes = { ...votes };
         updatedVotes[value]++;
         setVotes(updatedVotes);
+
+        statusChannel.publish({ name: "voteSummary", data: updatedVotes });
     });
 
     // These have .votes and .votePercentage properties in them now x
