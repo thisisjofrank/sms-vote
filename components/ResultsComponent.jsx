@@ -7,7 +7,7 @@ const ResultsComponent = ({ question }) => {
 
     const initialScores = {};
     question.options.map(x => x.key).forEach(i => initialScores[i] = 0);
-
+    
     const [votes, setVotes] = useState(initialScores);
 
     const [statusChannel] = readLastAblyMessage("sms-notifications-votes", async (lastMessage) => {

@@ -1,7 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { useChannel } from "./AblyReactEffect";
 import styles from './QuestionComponent.module.css';
-import { parseSms } from "./parseSms";
 
 const QuestionComponent = ({ question }) => {
 

@@ -2,7 +2,7 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import dynamic from 'next/dynamic';
 
-const QuestionsComponent = dynamic(() => import('../components/QuestionComponent'), { ssr: false });
+import QuestionsComponent from "../components/QuestionComponent";
 const ResultsComponent = dynamic(() => import('../components/ResultsComponent'), { ssr: false });
 
 export default function Home() {
