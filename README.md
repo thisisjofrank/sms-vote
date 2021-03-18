@@ -594,8 +594,17 @@ You'll be greeted with a modal dialog box, and you need to put your `acceptWebho
 
 If your Vercel app is called `your-vercel-app`, the webhook URL would be `https://[your-vercel-app].vercel.app/api/acceptWebhook`
 
-# Test it out!
+# Make it yours!
 
+This demo is open source, fork it and make it your own. Don't forget to show us what you build [@ablyRealtime](https://twitter.com/ablyrealtime).
+
+If you're looking for ways to extend this project you could consider:
+
+* supporting multiple questions.
+* supporting text in the answers, instead of just a single character.
+* adding a database to store votes for longer term.
+* adding in an option to vote in a browser.
+* sending a response text to the voters to thank them or let them know if their answer was correct.
 
 # Let us Know
 
