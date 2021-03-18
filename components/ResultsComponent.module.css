@@ -61,8 +61,15 @@
 .total {
     position: absolute;
     top: 2vw;
-    right: 40px;
+    right: 15px;
     font-size: 3vw;
     transform: translate(0, 1em);
     color: white;
 }
+
+@media (min-width: 850px ) {
+    .total {
+        right: 40px;
+    }
+}
+  
