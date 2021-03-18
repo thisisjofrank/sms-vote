@@ -25,7 +25,7 @@ const ResultsComponent = ({ question }) => {
         statusChannel.publish({ name: "voteSummary", data: updatedVotes });
     });
 
-    // These have .votes and .votePercentage properties in them now x
+    const totalVotes = getTotalVotes(votes);
     const itemsForDisplay = decorateOptionsWithVotes(question.options, votes);
     
     const displayItems = itemsForDisplay.map(opt => 
@@ -40,13 +40,17 @@ const ResultsComponent = ({ question }) => {
         <ul className={styles.votes}>
             {displayItems}
         </ul>
-        <div className={styles.total}>{}</div>
+        <div className={styles.total}>Total votes: <b>{totalVotes}</b></div>
     </>
     );
 }
 
+function getTotalVotes(votes) {
+    return Object.values(votes).reduce((a,b) => a+b);
+}
+
 function decorateOptionsWithVotes(options, votes) {
-    const totalVotes = Object.values(votes).reduce((a,b) => a+b);
+    const totalVotes = getTotalVotes(votes);
     const optionsWithVotes = [...options ];
 
     optionsWithVotes.forEach(option => {
