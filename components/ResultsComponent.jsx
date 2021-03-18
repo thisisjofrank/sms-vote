@@ -21,7 +21,7 @@ const ResultsComponent = ({ question }) => {
 
     // These have .votes and .votePercentage properties in them now x
     const itemsForDisplay = decorateOptionsWithVotes(question.options, votes);
-
+    
     const displayItems = itemsForDisplay.map(opt => 
         <li key={ opt.key } className={styles.vote} title={opt.text}>
             <span className={styles.number}>{ opt.votes }</span> 
@@ -34,6 +34,7 @@ const ResultsComponent = ({ question }) => {
         <ul className={styles.votes}>
             {displayItems}
         </ul>
+        <div className={styles.total}>{}</div>
     </>
     );
 }
