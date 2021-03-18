@@ -1,0 +1,41 @@
+.votes {
+    display: flex;
+    margin: 10px;
+    padding: 0;
+    list-style: none;
+    height: 100%;
+}
+
+.vote {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    width: 25%;
+}
+
+.bar {
+    width: 10vw;
+    transition: height 1s ease-in-out;
+}
+
+.vote:first-child .bar {
+    background-color: var(--a);
+}
+.vote:nth-child(2) .bar {
+    background-color:var(--b);
+}
+.vote:nth-child(3) .bar {
+    background-color: var(--c);
+}
+.vote:last-child .bar {
+    background-color: var(--d);
+}
+
+.number {
+    position: absolute;
+    bottom: 20px;
+    color: white;
+    font-size: 3vw;
+    font-weight: bold;
+}

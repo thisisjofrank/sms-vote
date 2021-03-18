@@ -3,6 +3,7 @@ import styles from '../styles/Home.module.css';
 import dynamic from 'next/dynamic';
 
 const QuestionsComponent = dynamic(() => import('../components/QuestionComponent'), { ssr: false });
+const ResultsComponent = dynamic(() => import('../components/ResultsComponent'), { ssr: false });
 
 export default function Home() {
     
@@ -20,6 +21,7 @@ export default function Home() {
         <h1 className={styles.title}>Text: (+44) 7937 985 836 <br />to vote</h1>
       </header>
         <QuestionsComponent question={question} />
+        <ResultsComponent question={question} />
       </main>
 
       <footer className={styles.footer}>

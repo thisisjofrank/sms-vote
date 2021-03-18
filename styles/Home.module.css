@@ -3,7 +3,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #05080C;
+  color: hsl(214, 41%, 3%);
+}
+
+.main {
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
