@@ -1,10 +1,20 @@
 .votes {
+    position: relative;
     display: flex;
     height: calc(100% - 60px);
     margin: 10px 10px 60px 10px;
     padding: 0;
-    border-bottom: 3px solid var(--black);
     list-style: none;
+}
+
+.votes:after {
+    content: "";
+    width: calc(100% - 20px);
+    height: 4px;
+    background-color: var(--black);
+    position: absolute;
+    bottom: -1px;
+    left: 10px;
 }
 
 .vote {
@@ -16,8 +26,16 @@
 }
 
 .bar {
-    width: 10vw;
+    width: 16vw;
+    transform: scale(1, 2) translate(0px, 0px);
+    transform-origin: bottom;
     transition: height 1s ease-in-out;
+}
+
+@media (min-width: 850px ) {
+    .bar {
+        width: 10vw;
+    }
 }
 
 .vote:first-child .bar {
@@ -35,10 +53,9 @@
 
 .number {
     position: absolute;
-    bottom: 20px;
-    font-size: 3vw;
-    font-weight: bold;
     bottom: -45px;
+    font-size: clamp(28px, 3vw, 36px);
+    font-weight: bold;
 }
 
 .total {

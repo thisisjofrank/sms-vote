@@ -63,4 +63,4 @@ function decorateOptionsWithVotes(options, votes) {
     return optionsWithVotes;
 }
 
-export default ResultsComponent; 
+export default ResultsComponent;
