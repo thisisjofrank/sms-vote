@@ -17,10 +17,10 @@ export default function Home() {
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@ablyrealtime" />
         <meta name="twitter:creator" content="@thisisjfrank" />
-        <meta property="og:url" content="https:/sms-vote.vercel.app/" />
+        <meta property="og:url" content="https://sms-vote.vercel.app/" />
         <meta property="og:title" content="Which biscuit is best?" />
         <meta property="og:description" content="Text A, B, C or D to vote!" />
-        <meta property="og:image" content="https:/sms-vote.vercel.app/images/tw.png" />
+        <meta property="og:image" content="https://sms-vote.vercel.app/images/tw.png" />
       </Head>
       <main className={styles.main}>
       <header className={styles.header}>
