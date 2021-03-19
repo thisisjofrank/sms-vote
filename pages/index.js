@@ -25,10 +25,17 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <a href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app" target="_blank" rel="noopener noreferrer">
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
+        <p className={styles.powered}>Powered by</p>
+        <a className={styles.vercel} href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app" target="_blank" rel="noopener noreferrer">Vercel</a>
+          <span className={styles.plus}>+</span>
+        <a className={styles.vonage} href="https://www.vonage.co.uk/" target="_blank" rel="noopener noreferrer">
+          Vonage
         </a>
+          <span className={styles.plus}>+</span>
+        <a className={styles.ably} href="https://ably.com/" target="_blank" rel="noopener noreferrer">
+          Ably
+        </a>
+        <a className={styles.github} href="https://github.com/ably-labs/vonage-vercel-voting">Fork it on Github</a>
       </footer>
     </div>
   )

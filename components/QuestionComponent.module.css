@@ -1,7 +1,7 @@
 .question {
     margin-bottom: 10px;
     text-align: center;
-    font-size: 4vw;
+    font-size: clamp(28px, 4vw, 40px);
 }
 
 .answers {

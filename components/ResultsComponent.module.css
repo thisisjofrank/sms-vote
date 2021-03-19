@@ -62,7 +62,7 @@
     position: absolute;
     top: 2vw;
     right: 15px;
-    font-size: 3vw;
+    font-size: clamp(14px, 3vw, 30px);
     transform: translate(0, 1em);
     color: white;
 }

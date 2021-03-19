@@ -32,7 +32,7 @@
 
 .title {
   color: white;
-  font-size: 4vw;
+  font-size: clamp(14px, 4vw, 50px);
 }
 
 .footer {
@@ -40,15 +40,94 @@
   height: 60px;
   border-top: 1px solid #eaeaea;
   display: flex;
+  align-items: center;
+  padding: 0 20px 
 }
 
-.footer img {
-  margin-left: 0.5rem;
-  height: 1em;
+.powered {
+  padding-bottom: 8px;
+}
+
+.plus {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 0.4em;
+  padding-bottom: 10px;
 }
 
 .footer a {
-  display: flex;
-  align-items: center;
-  margin-left: 20px;
+  margin: 10px;
+  color: transparent;
+}
+
+.vercel {
+  width: 24px;
+  height: 1.3em; 
+  background: url(/images/vercel.svg) no-repeat left;
+  background-size: 90px; 
+}
+
+.vonage {
+  width: 24px;
+  height: 1.3em;
+  background: url(/images/vonage.svg) no-repeat left;
+  background-size: 90px; 
+}
+
+.ably {
+  width: 30px;
+  height: 30px;
+  background: url(/images/ably.svg) no-repeat left;
+  background-size: 80px; 
+}
+
+.footer a.github {
+  height: 30px;
+  width: 30px;
+  margin-left: auto;
+  background: url(/images/github.svg) no-repeat right;
+  background-size: 25px;
+}
+
+@media (min-width: 800px) {
+  .footer a {
+    margin: 1em;
+  }
+
+  .vercel {
+    width: 90px;
+    height: 1.3em; 
+    background: url(/images/vercel.svg) no-repeat center;
+    background-size: 90px; 
+  }
+  
+  .vonage {
+    width: 90px;
+    height: 1.3em;
+    background: url(/images/vonage.svg) no-repeat center;
+    background-size: 90px; 
+  }
+  
+  .ably {
+    width: 90px;
+    height: 30px;
+    background: url(/images/ably.svg) no-repeat center;
+    background-size: 90px; 
+  }
+
+  .footer a.github {
+    height: 30px;
+    width: auto;
+    margin-left: auto;
+    padding-right: 40px;
+    line-height: 30px;
+    background: url(/images/github.svg) no-repeat right;
+    background-size: 25px;
+    color: var(--black);
+  }
+
+  .footer a.github:hover {
+    color: var(--b);
+  }
+  
 }
